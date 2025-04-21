@@ -30,9 +30,7 @@ with st.sidebar:
     tag_year_selected = tag_month_selected[:4]
     #is_full_year_selected = st.checkbox('Transactions Full Year?', value=False)
 
-# import data from ./data/budget.csv
 budgets = pd.read_csv('./data/budget.csv')
-# filter the budgets dataframe by tag_month
 budgets = budgets[budgets['tag_month'] == tag_month_selected]
 budgets.set_index("budget_category", inplace=True)
 
